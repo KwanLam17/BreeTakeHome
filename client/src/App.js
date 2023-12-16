@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const apiCall = () => {
-  axios.get('http://localhost:8080').then((data) => {
+  axios.get(process.env.REACT_APP_API_URL || 'http://localhost:8080').then((data) => {
     //this console.log will be in our frontend console
     console.log(data)
   })
